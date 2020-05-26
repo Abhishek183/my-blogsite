@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+{% block title  %} contact
+{% endblock title  %}
+
+{% block body  %}
+<div class="container">
+<h2> Contact for admin</h2>
+<form method="post" action="/contact">
+{% csrf_token %}
+  <div class="form-group">
+    <label for="exampleInputname">Username</label>
+    <input type="name" class="form-control" name="name" id="exampleInputEmail1" aria-describedby="nameHelp">
+    <small id="nameHelp" class="form-text text-muted">We'll never share your email with anyone else.
+  </div>
+  <div class="form-group">
+    <label for="exampleInputEmail1">Email address</label>
+    <input type="email" class="form-control"name="email" id="exampleInputEmail1" aria-describedby="emailHelp">
+    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+  </div>
+  <div class="form-group">
+    <label for="exampleInputPassword1">Password</label>
+    <input type="password" class="form-control" name="password" id="exampleInputPassword1">
+  </div>
+  <div class="form-group form-check">
+    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+    <label class="form-check-label" for="exampleCheck1"><b>i' m not a robot</b></label>
+  </div>
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+</div>
+{% endblock body %}
+

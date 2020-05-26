@@ -1,0 +1,30 @@
+ {% extends 'base.html' %}
+{% block title  %} add post
+{% endblock title  %}
+
+{% block body  %}
+<div class="container">
+<h2> Add the post</h2>
+<form method="post" action="/submit">
+{% csrf_token %}
+  <div class="form-group">
+    <label for="exampleInputname">title</label>
+    <input type="name" class="form-control" name="title" id="title" aria-describedby="nameHelp">
+    <small id="nameHelp" class="form-text text-muted">
+  </div>
+  <div class="form-group">
+    <label for="exampleInputEmail1">content</label>
+    <input type="text" class="form-control"name="content" id="content" aria-describedby="nameHelp">
+    <small id="nameHelp" class="form-text text-muted"></small>
+    
+  </div>
+  <div class="form-group">
+    <label for="exampleInputPassword1">author</label>
+    <input type="name" class="form-control" name="author" id="author">
+  </div>
+
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+</div>
+{% endblock body %}
+
